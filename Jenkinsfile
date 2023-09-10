@@ -54,7 +54,7 @@ pipeline {
 
             steps
                         {
-                sh "docker run -d -p 8003:8080 nikhilnidhi/samplewebapp"
+                sh "docker run -d -p 8004:8080 nikhilnidhi/samplewebapp"
 
             }
         }
@@ -62,7 +62,7 @@ pipeline {
 
             steps {
 		sh "ssh-add"
-                sh "docker -H ssh://ubuntu@54.92.145.81 run -d -p 8003:8080 nikhilnidhi/samplewebapp"
+                sh "docker -H ssh://ubuntu@54.172.226.69 run -d -p 8004:8080 nikhilnidhi/samplewebapp"
 
             }
         }
